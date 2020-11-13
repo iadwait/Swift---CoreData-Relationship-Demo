@@ -14,6 +14,8 @@ class DatabaseHelper: NSObject {
     static let shared = DatabaseHelper()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    
+    //MARK:- College
     //MARK:- Save Data
     func saveCollegeData(collegeDict: [String:String])
     {
@@ -81,5 +83,41 @@ class DatabaseHelper: NSObject {
             print("Error Updating Data - \(err.localizedDescription)")
         }
     }
-
+    
+    //MARK:- Student
+    
+    //MARK:- Save Data
+    func saveStudentData(studentDict: [String:String],college: College)
+    {
+        //Get Reference of College Entity
+        let student = NSEntityDescription.insertNewObject(forEntityName: "Student", into: context) as! Student
+        //Save Data to College Entity's Attributes
+        student.name = studentDict["studentName"]
+        student.email = studentDict["studentEmail"]
+        student.mobile = studentDict["studentMobile"]
+        student.university = college
+        
+        //Save in Core Data
+        do{
+            try context.save()
+            print("*Student Data Save Successfully*\n")
+        }catch let err{
+            print("Error Saving Student Data Object - \(err.localizedDescription)")
+        }
+    }
+    
+     //MARK:- Fetch Data
+       func getAllStudentData() -> [Student]
+       {
+           var arrStudentData = [Student]()
+           let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Student")
+           do{
+               arrStudentData = try context.fetch(fetchRequest) as! [Student]
+           }catch let err{
+               print("Error Fetching Student Data \(err.localizedDescription)")
+           }
+           
+           return arrStudentData
+       }
+    
 }

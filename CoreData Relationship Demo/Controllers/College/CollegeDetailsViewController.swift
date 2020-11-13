@@ -40,5 +40,13 @@ class CollegeDetailsViewController: UITableViewController {
         navigationController?.pushViewController(updateVC, animated: true)
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 4{
+            let studentStoryboard = UIStoryboard(name: "Student", bundle: nil)
+            let studListVC = studentStoryboard.instantiateViewController(withIdentifier: "StudentListViewController") as! StudentListViewController
+            studListVC.collegeData = collegeData
+            navigationController?.pushViewController(studListVC, animated: true)
+        }
+    }
     
 }

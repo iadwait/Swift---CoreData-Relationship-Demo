@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE405312255E9F580060F523 /* Student.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE405311255E9F580060F523 /* Student.storyboard */; };
+		DE405314255EA05E0060F523 /* StudentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE405313255EA05E0060F523 /* StudentListViewController.swift */; };
+		DE405316255EA0740060F523 /* StudentFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE405315255EA0740060F523 /* StudentFormViewController.swift */; };
+		DE40531A255EAB8A0060F523 /* StudentListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE405319255EAB8A0060F523 /* StudentListViewCell.swift */; };
 		DED1919A255E4FAE001C9B1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED19199255E4FAE001C9B1C /* AppDelegate.swift */; };
 		DED1919C255E4FAE001C9B1C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED1919B255E4FAE001C9B1C /* SceneDelegate.swift */; };
 		DED191A1255E4FAE001C9B1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED1919F255E4FAE001C9B1C /* Main.storyboard */; };
@@ -40,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE405311255E9F580060F523 /* Student.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Student.storyboard; sourceTree = "<group>"; };
+		DE405313255EA05E0060F523 /* StudentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListViewController.swift; sourceTree = "<group>"; };
+		DE405315255EA0740060F523 /* StudentFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentFormViewController.swift; sourceTree = "<group>"; };
+		DE405319255EAB8A0060F523 /* StudentListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListViewCell.swift; sourceTree = "<group>"; };
 		DED19196255E4FAE001C9B1C /* CoreData Relationship Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CoreData Relationship Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED19199255E4FAE001C9B1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DED1919B255E4FAE001C9B1C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +94,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE405310255E9F3E0060F523 /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				DE405313255EA05E0060F523 /* StudentListViewController.swift */,
+				DE405315255EA0740060F523 /* StudentFormViewController.swift */,
+			);
+			path = Student;
+			sourceTree = "<group>";
+		};
+		DE405318255EAB3F0060F523 /* Student Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DE405319255EAB8A0060F523 /* StudentListViewCell.swift */,
+			);
+			path = "Student Cell";
+			sourceTree = "<group>";
+		};
 		DED1918D255E4FAE001C9B1C = {
 			isa = PBXGroup;
 			children = (
@@ -114,8 +139,9 @@
 				DED191D1255E545D001C9B1C /* Controllers */,
 				DED19199255E4FAE001C9B1C /* AppDelegate.swift */,
 				DED1919B255E4FAE001C9B1C /* SceneDelegate.swift */,
-				DED1919F255E4FAE001C9B1C /* Main.storyboard */,
 				DED191A5255E4FB1001C9B1C /* Assets.xcassets */,
+				DED1919F255E4FAE001C9B1C /* Main.storyboard */,
+				DE405311255E9F580060F523 /* Student.storyboard */,
 				DED191A7255E4FB1001C9B1C /* LaunchScreen.storyboard */,
 				DED191AA255E4FB1001C9B1C /* Info.plist */,
 				DED191A2255E4FAF001C9B1C /* CoreData_Relationship_Demo.xcdatamodeld */,
@@ -153,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				DED191D4255E549D001C9B1C /* College */,
+				DE405310255E9F3E0060F523 /* Student */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -170,6 +197,7 @@
 		DED191D5255E5CFF001C9B1C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DE405318255EAB3F0060F523 /* Student Cell */,
 				DED191D6255E5D05001C9B1C /* College Cell */,
 			);
 			path = View;
@@ -287,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE405312255E9F580060F523 /* Student.storyboard in Resources */,
 				DED191A9255E4FB1001C9B1C /* LaunchScreen.storyboard in Resources */,
 				DED191A6255E4FB1001C9B1C /* Assets.xcassets in Resources */,
 				DED191A1255E4FAE001C9B1C /* Main.storyboard in Resources */,
@@ -314,7 +343,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE40531A255EAB8A0060F523 /* StudentListViewCell.swift in Sources */,
 				DED191CD255E5179001C9B1C /* CollegeListViewController.swift in Sources */,
+				DE405314255EA05E0060F523 /* StudentListViewController.swift in Sources */,
+				DE405316255EA0740060F523 /* StudentFormViewController.swift in Sources */,
 				DED191DA255E7A01001C9B1C /* CollegeDetailsViewController.swift in Sources */,
 				DED191D8255E5D24001C9B1C /* CollegeListViewCell.swift in Sources */,
 				DED1919A255E4FAE001C9B1C /* AppDelegate.swift in Sources */,
