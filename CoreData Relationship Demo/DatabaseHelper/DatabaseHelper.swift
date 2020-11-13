@@ -14,6 +14,7 @@ class DatabaseHelper: NSObject {
     static let shared = DatabaseHelper()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    //MARK:- Save Data
     func saveCollegeData(collegeDict: [String:String])
     {
         //Get Reference of College Entity
@@ -32,6 +33,7 @@ class DatabaseHelper: NSObject {
         }
     }
     
+    //MARK:- Fetch Data
     func getAllCollegeData() -> [College]
     {
         var arrCollegeData = [College]()
@@ -45,6 +47,7 @@ class DatabaseHelper: NSObject {
         return arrCollegeData
     }
     
+    //MARK:- Delete Data
     func deleteCollegeData(index: Int) -> [College]
     {
         var arrCollegeData = getAllCollegeData() //Get All Data from Core Database and Store in array
@@ -63,6 +66,7 @@ class DatabaseHelper: NSObject {
         return arrCollegeData
     }
     
+    //MARK:- Update Data
     func updateData(indexAt: Int,collegeData: [String:String])
     {
         let arrCollegeData = getAllCollegeData()
