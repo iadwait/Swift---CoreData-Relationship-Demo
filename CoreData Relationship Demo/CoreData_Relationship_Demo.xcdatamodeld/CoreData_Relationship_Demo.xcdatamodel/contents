@@ -5,8 +5,16 @@
         <attribute name="city" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="university" optional="YES" attributeType="String"/>
+        <relationship name="students" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Student" inverseName="university" inverseEntity="Student"/>
+    </entity>
+    <entity name="Student" representedClassName="Student" syncable="YES" codeGenerationType="class">
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="mobile" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="university" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="College" inverseName="students" inverseEntity="College"/>
     </entity>
     <elements>
-        <element name="College" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="College" positionX="-289.76953125" positionY="-112.83984375" width="128" height="118"/>
+        <element name="Student" positionX="-63" positionY="9" width="128" height="103"/>
     </elements>
 </model>
